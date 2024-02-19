@@ -6,7 +6,10 @@ import PackageDescription
 let package = Package(
     name: "swiftAnalyser",
     products: [
-        .executable(name: "swiftAnalyserApp", targets: ["swiftAnalyserApp"]),
+        // Products define the executables and libraries a package produces, making them visible to other packages.
+        .library(
+            name: "swiftAnalyser",
+            targets: ["swiftAnalyser"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -16,9 +19,13 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        .executableTarget(
-            name: "swiftAnalyserApp",
-            dependencies: [.target(name: "swiftAnalyser")]),
-        .target(name: "swiftAnalyser")
-    ]
+        .target(
+            name: "swiftAnalyser",
+            dependencies: [
+                .product(name: "SourceKittenFramework", package: "SourceKitten"),
+            ]),
+        .testTarget(
+            name: "swiftAnalyserTests",
+            dependencies: ["swiftAnalyser"]),
+        ]
 )
