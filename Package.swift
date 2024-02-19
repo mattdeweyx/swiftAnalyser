@@ -14,6 +14,6 @@ let package = Package(
         .executableTarget(
             name: "swiftAnalyserApp",
             dependencies: [.target(name: "swiftAnalyser")]),
-        .target(name: "swiftAnalyser", path: "Sources/module")
+        .target(name: "swiftAnalyser")
     ]
 )
