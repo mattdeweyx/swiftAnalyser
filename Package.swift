@@ -9,10 +9,10 @@ let package = Package(
         .executable(name: "swiftAnalyser", targets: ["swiftAnalyser"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/jpsim/SourceKitten.git", from: "0.31.0")
+        .package(url: "https://github.com/jpsim/SourceKitten.git", from: "0.34.1")
     ],
     targets: [
-        .target(
+        .executableTarget(
             name: "swiftAnalyser",
             dependencies: ["SourceKittenFramework"]),
     ]
