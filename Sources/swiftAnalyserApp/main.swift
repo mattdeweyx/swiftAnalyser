@@ -13,7 +13,7 @@ func getImportModule(for expression: String) -> String? {
 
     guard let module = cursorInfo?["key.modulename"] as? String else {
         return nil
-    }
+    } 
 
     return module
 }
