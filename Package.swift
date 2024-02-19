@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "swiftAnalyser",
     products: [
-        .executable(name: "swiftAnalyserApp", targets: ["swiftAnalyserApp"]),
+        .executable(name: "swiftAnalyser", targets: ["swiftAnalyser"]),
     ],
     dependencies: [
         .package(url: "https://github.com/jpsim/SourceKitten.git", from: "0.31.0")
@@ -14,8 +14,6 @@ let package = Package(
     targets: [
         .target(
             name: "swiftAnalyser",
-            dependencies: ["SourceKittenFramework"
-            path: "Sources/swiftAnalyserApp",]
-            )
+            dependencies: ["SourceKittenFramework"]),
     ]
 )
