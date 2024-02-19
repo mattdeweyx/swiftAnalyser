@@ -14,6 +14,6 @@ let package = Package(
     targets: [
         .executableTarget(
             name: "swiftAnalyser",
-            dependencies: ["SourceKittenFramework"]),
+            dependencies: ["SourceKitten"]),
     ]
 )
