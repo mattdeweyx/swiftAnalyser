@@ -14,8 +14,8 @@ let package = Package(
     targets: [
         .target(
             name: "swiftAnalyser",
-            path: "Sources/SomeSwiftPackage",
-            dependencies: ["SourceKittenFramework"]
+            dependencies: ["SourceKittenFramework"
+            path: "Sources/swiftAnalyserApp",]
             )
     ]
 )
